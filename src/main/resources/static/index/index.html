@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord Page </title>
+    <link rel="stylesheet" href="/src/main/resources/static/style/dash-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <h1>Loan Tracker Dashbord</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Loans</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section id="Overview" class="dashbord_section">
+        <h2>Overview</h2>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>Total Loans</h3>
+                <p id="totalLoans">$0</p>
+            </div>
+            <div class="stat">
+                <h3>Total Customers</h3>
+                <p id="totalCustomers">0</p>
+
+
+            </div>
+            <div class="stat">
+                <h3>Monthly Credits</h3>
+                <p id="monthlyCredits">$0</p>
+            </div>
+
+
+        </div>
+</section>
+<section id="addCustomer" class="dashboard-section">
+    <h3>Add Customer</h3>
+    <form id="customerForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="MobileNumber" placeholder="MobileNumber" required>
+    <input type="text" id="occupation" placeholder="Occupation" required>
+    <input type="number" id="loanAmount" placeholder="Loan Amount" required>
+    <button type="submit">Add Customer</button>
+</form>
+</section>    
+<section id="addLoan" class="dashboard-section">
+    <h3>Add Loan</h3>
+    <form id="loanForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="loanType" placeholder="Loan Type" required>
+        <input type="number" id="loanAmount" placeholder="Loan Amount" required>
+        <input type="number" id="Rate_of_Intrest" placeholder="Rate of Intrest" required>
+        <input type="number" id="Start_Date" placeholder="Start Date" required>
+        <input type="number" id="End_Date" placeholder="End Date" required>
+         <button type="submit">Add Loan</button>
+    </form>
+
+</section>
+
+<button onclick="getAllCustomers()">Show all Customers</button>
+<button onclick="getAllLoanDetails()">Show all Loan Details</button>
+<button onclick="addCustomer()">Add Customer</button>
+<button onclick="addLoan()">Add Loan</button>
+
+<section id="Customers" class="dashbord_section">
+    <h3>Customers Details</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile No.</th>
+                <th>Address</th>
+                <th>Occupation</th>
+                <th>Loan Amount</th>
+              
+            </tr>
+        </thead>
+        <tbody id="customerTable">
+            <!-- Data will be loaded dynamically -->
+        </tbody>
+    </table>
+
+
+</section>
+<section id="Loans" class="dashbord_section">
+    <h3>Loan Details</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+                        <th>Loan Type</th>
+                        <th>Loan Amount</th>
+                        <th>Monthly Interest</th>
+                        <th>Total Due</th>
+        </tr>
+    </thead>
+    <tbody id="loanTable">
+
+    </tbody>
+</table>
+</section>
+
+<section id="settings" class="dashboard-section">
+    <h2>Settings</h2>
+    <p>Coming soon...</p>
+</section>
+
+<section id="profit/loss" class="dashboard-section">
+    <h2>Profit/Loss</h2>
+    <div class="stats">
+        <div class="stat">
+            <h3>Profit</h3>
+            <p id="totalProfit">0%</p>
+        </div>
+        <div class="stat">
+            <h3>Loss</h3>
+            <p id="totalLoss">0%</p>
+        </div>
+    </div>
+
+    
+</section>
+
+</main> 
+
+</main>
+<footer>
+    <p>&copy; 2024 Loan Management System. All rights reserved.</p>
+</footer>
+
+<script src="/src/main/resources/static/js/scripts.js"></script>
+    
+</body>
+</html>

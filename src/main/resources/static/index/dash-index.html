@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management System</title>
+    <link rel="stylesheet" href="/src/main/resources/static/style/dashbord_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <section class="left-panel">
+            <h1>Loan Management</h1>
+            <form id="loanForm">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" required>
+                
+                <label for="loanAmount">Loan Amount:</label>
+                <input type="number" id="loanAmount" required>
+                
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" required>
+                
+                <label for="loanDuration">Duration (Years):</label>
+                <input type="number" id="loanDuration" required>
+                
+                <button type="submit">Add Loan</button>
+            </form>
+        </section>
+
+        <!-- Right Panel -->
+        <section class="right-panel">
+            <h2>Customer List</h2>
+            <table id="customerTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Loan Amount</th>
+                        <th>Interest Rate</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Loan List</h2>
+            <table id="loanTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer Name</th>
+                        <th>Amount</th>
+                        <th>Interest</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Profit and Loss</h2>
+            <div class="profit-loss">
+                <p><strong>Total Interest Earned:</strong> <span id="totalProfit">₹0</span></p>
+                <p><strong>Total Loss (Unrecovered Loans):</strong> <span id="totalLoss">₹0</span></p>
+            </div>
+
+            <h2>Active Loans</h2>
+            <table id="activeLoansTable">
+                <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Customer Name</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Monthly Loan Tracker</h2>
+            <table id="monthlyLoanTracker">
+                <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Customer Name</th>
+                        <th>Due Date</th>
+                        <th>Amount Due</th>
+                        <th>Interest</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Loan Growth Over Time</h2>
+            <canvas id="loanGrowthChart"></canvas>
+        </section>
+    </div>
+
+    <script src="/src/main/resources/static/js/dash-scripy.js"></script>
+</body>
+</html>

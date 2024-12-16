@@ -1,0 +1,157 @@
+*{
+   font-family: sans-serif;
+  
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+   background-color: #f4f4f9;
+   color: #333;
+
+}
+h1,h2, h3 {
+    margin: 0;
+    color: #444;
+
+}
+a {
+
+    text-decoration: none;
+    color: #007bff;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.dashbord_header
+{
+    background-color: #00ddff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.dashboard-header h1 {
+    font-size: 1.5rem;
+    background-color: #00ddff;
+    
+
+}
+.dashboard-header nav ul {
+    list-style: none;
+    display: flex; /* Horizontal alignment */
+    gap: 1.5rem; /* Space between links */
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center links horizontally across the page */
+    align-items: center; /* Vertical alignment */
+    width: 100%; /* Take full width of the header */
+}
+nav ul li {
+  margin: 0;
+}
+nav ul li a {
+    display: inline-block; /* Ensure inline layout */
+    padding: 10px 15px;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+nav ul li a:hover {
+    background-color: black;
+    color: #0056b3;
+    border-radius: 40px;
+    text-decoration: underline;
+   
+}
+/* Optional: Styling for active link */
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+.dashboard-section {
+    margin-bottom: 2rem;
+}
+.dashboard-section h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+/* Stats section */
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.stat {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.stat h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.stat p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #007bff;
+    text-align: center;
+}
+/* 
+Table Style */
+
+table {
+    width: 100;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border: 1.5px solid #ddd;
+}
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+th {
+    font-weight: bold;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+#profit{
+
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
